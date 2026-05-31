@@ -122,24 +122,70 @@ body{
     color:#1e3a8a;
 }
 
+
 .avatars{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+    gap:40px;
+    margin-top:50px;
 }
 
 .avatar-card{
-    background:white;
-    padding:30px;
+    background:#fff;
     border-radius:20px;
+    padding:30px;
     text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
 }
 
-.avatar{
-    font-size:80px;
-    margin-bottom:20px;
+.lottie-avatar{
+    width:320px;
+    height:320px;
+    margin:auto;
 }
+
+.speech-bubble{
+    margin-top:20px;
+    padding:20px;
+    min-height:150px;
+    border-radius:15px;
+    background:#f8fafc;
+    line-height:1.8;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    text-align:left;
+}
+
+.avatar-card button{
+    margin-top:20px;
+    padding:12px 24px;
+    border:none;
+    border-radius:10px;
+    background:#1e3a8a;
+    color:#fff;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.avatar-card button:hover{
+    background:#172554;
+}
+
+@media(max-width:768px){
+
+    .avatars{
+        grid-template-columns:1fr;
+    }
+
+    .lottie-avatar{
+        width:250px;
+        height:250px;
+    }
+
+}
+
+
+
+
 
 button{
     border:none;
