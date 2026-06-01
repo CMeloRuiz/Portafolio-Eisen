@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family: "Outfit", sans-serif;
 }
 
 html{
@@ -31,9 +34,8 @@ body{
     align-items:center;
 }
 
-.logo{
-    color:white;
-    font-weight:700;
+.navbar a img {
+    height: 50px;
 }
 
 .nav-links{
@@ -68,13 +70,26 @@ body{
 }
 
 .escudo{
-    width:180px;
+    width:250px;
     margin-bottom:30px;
 }
 
 .hero h1{
     line-height:1.6;
     margin-bottom:40px;
+}
+
+.poster-identificando {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.poster-identificando .poster {
+    margin-bottom: 20px;
+    width: 400px;
+    height: 500px;
 }
 
 .info-card{
@@ -222,6 +237,12 @@ button{
 .placeholder{
     padding:100px 20px;
     text-align:center;
+}
+
+.placeholder img {
+    margin-top: 50px;
+    border-radius: 20px;
+    height: 300px;
 }
 
 footer{
