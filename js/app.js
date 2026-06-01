@@ -25,8 +25,23 @@ const profesoraAnimation = lottie.loadAnimation({
     path: "assets/avatars/profesora.json"
 });
 
-const speech1 = document.getElementById("speech1");
-const speech2 = document.getElementById("speech2");
+function botonPlay(texto) {
+
+    return `
+        <i class="fa-solid fa-play"></i>
+        ${texto}
+    `;
+
+}
+
+function botonStop(texto) {
+
+    return `
+        <i class="fa-solid fa-stop"></i>
+        ${texto}
+    `;
+
+}
 
 function detenerTodo() {
 
@@ -35,16 +50,14 @@ function detenerTodo() {
     reproduciendoProfesor = false;
     reproduciendoProfesora = false;
 
-    btnProfesor.textContent = "Escuchar Presentación";
-    btnProfesora.textContent = "Escuchar Explicación";
+    btnProfesor.innerHTML = botonPlay("Escuchar Presentación");
+    btnProfesora.innerHTML = botonPlay("Escuchar Explicación");
 
 }
 
-function hablar(texto, avatar, bubble, tipo) {
+function hablar(texto, avatar, tipo) {
 
     detenerReproduccion();
-
-    bubble.textContent = texto;
 
     const voz = new SpeechSynthesisUtterance(texto);
 
@@ -69,15 +82,14 @@ function hablar(texto, avatar, bubble, tipo) {
     if (tipo === "profesor") {
 
         reproduciendoProfesor = false;
-        btnProfesor.textContent = "Escuchar Presentación";
+        btnProfesor.innerHTML = botonPlay("Escuchar Presentación");
 
     }
 
     if (tipo === "profesora") {
 
         reproduciendoProfesora = false;
-        btnProfesora.textContent = "Escuchar Explicación";
-
+        btnProfesora.innerHTML = botonPlay("Escuchar Explicación");
     }
 
     };
@@ -116,7 +128,7 @@ btnProfesor.addEventListener("click", () => {
 
     reproduciendoProfesor = true;
 
-    btnProfesor.textContent = "Parar Presentación";
+    btnProfesor.innerHTML = botonStop("Parar Presentación");
 
     hablar(
         `Bienvenidos.
@@ -127,7 +139,6 @@ btnProfesor.addEventListener("click", () => {
 
         La directora del trabajo de grado es Liris Múnera.`,
         profesorAnimation,
-        speech1,
         "profesor"
     );
 
@@ -144,7 +155,7 @@ btnProfesora.addEventListener("click", () => {
 
     reproduciendoProfesora = true;
 
-    btnProfesora.textContent = "Parar Explicación";
+    btnProfesora.innerHTML = botonStop("Parar Explicación");
 
     hablar(
         `La investigación aborda las dificultades que presentan los estudiantes de noveno grado en la producción de textos coherentes y cohesivos.
@@ -153,7 +164,6 @@ btnProfesora.addEventListener("click", () => {
 
         Frente a esta situación se propone implementar LanguageTool como una estrategia tecnológica y pedagógica que contribuya al fortalecimiento de las competencias de escritura.`,
         profesoraAnimation,
-        speech2,
         "profesora"
     );
 
