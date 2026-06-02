@@ -14,7 +14,7 @@ const profesorAnimation = lottie.loadAnimation({
     renderer: "svg",
     loop: true,
     autoplay: false,
-    path: "assets/avatars/profesor.json"
+    path: "assets/avatars/profesor_2.json"
 });
 
 const profesoraAnimation = lottie.loadAnimation({
@@ -22,7 +22,7 @@ const profesoraAnimation = lottie.loadAnimation({
     renderer: "svg",
     loop: true,
     autoplay: false,
-    path: "assets/avatars/profesora.json"
+    path: "assets/avatars/profesora_3.json"
 });
 
 function botonPlay(texto) {

@@ -186,15 +186,13 @@ body{
 }
 
 .avatar-card button{
-    margin-top:auto;
+    /* margin-top:auto; */
     margin-left:auto;
     margin-right:auto;
-
     display:flex;
     align-items:center;
     justify-content:center;
     gap:8px;
-
     padding:12px 24px;
     border:none;
     border-radius:10px;
