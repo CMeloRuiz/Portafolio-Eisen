@@ -289,6 +289,11 @@ footer{
         font-size: 20px;
     }
 
+    .placeholder img {
+        width: 400px;
+        height: 350px;
+    }
+
 }
 
 @media(max-width:550px) {
@@ -303,4 +308,6 @@ footer{
         width: 320px;
         height: 400px;
     }
+
+
 }
